@@ -1,0 +1,111 @@
+{
+  "parity": [
+    {
+      "case": "base",
+      "sheet": "Operating Forecast",
+      "cell": "H11",
+      "actual": 9139.007602390388,
+      "target": 9139.007602390386
+    },
+    {
+      "case": "base",
+      "sheet": "DCF",
+      "cell": "D19",
+      "actual": 20823.652549491962,
+      "target": 20823.652549491962
+    },
+    {
+      "case": "base",
+      "sheet": "LBO",
+      "cell": "D45",
+      "actual": 0.10520592382461769,
+      "target": 0.10520592382461769
+    },
+    {
+      "case": "base",
+      "sheet": "LBO",
+      "cell": "H33",
+      "actual": 0,
+      "target": 0
+    },
+    {
+      "case": "base",
+      "sheet": "Checks",
+      "cell": "D16",
+      "actual": 1.8189894035458565e-12,
+      "target": 0
+    },
+    {
+      "case": "upside",
+      "sheet": "Operating Forecast",
+      "cell": "H11",
+      "actual": 10482.240343250984,
+      "target": 10482.240343250984
+    },
+    {
+      "case": "upside",
+      "sheet": "DCF",
+      "cell": "D19",
+      "actual": 25171.269113633294,
+      "target": 25171.269113633294
+    },
+    {
+      "case": "upside",
+      "sheet": "LBO",
+      "cell": "D45",
+      "actual": 0.18805792102652075,
+      "target": 0.18805792102652075
+    },
+    {
+      "case": "upside",
+      "sheet": "LBO",
+      "cell": "H33",
+      "actual": 0,
+      "target": 0
+    },
+    {
+      "case": "upside",
+      "sheet": "Checks",
+      "cell": "D16",
+      "actual": 1.8189894035458565e-12,
+      "target": 0
+    },
+    {
+      "case": "downside",
+      "sheet": "Operating Forecast",
+      "cell": "H11",
+      "actual": 6865.46452522646,
+      "target": 6865.464525226461
+    },
+    {
+      "case": "downside",
+      "sheet": "DCF",
+      "cell": "D19",
+      "actual": 13692.57174556929,
+      "target": 13692.571745569283
+    },
+    {
+      "case": "downside",
+      "sheet": "LBO",
+      "cell": "D45",
+      "actual": -0.08349103247390455,
+      "target": -0.08349103247390455
+    },
+    {
+      "case": "downside",
+      "sheet": "LBO",
+      "cell": "H33",
+      "actual": 2474.4892837918355,
+      "target": 2474.489283791838
+    },
+    {
+      "case": "downside",
+      "sheet": "Checks",
+      "cell": "D16",
+      "actual": 3.637978807091713e-12,
+      "target": 0
+    }
+  ],
+  "error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "later_period_driver_test": true
+}

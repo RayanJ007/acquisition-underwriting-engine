@@ -1,0 +1,20 @@
+company:
+  name: Garmin Ltd.
+  ticker: GRMN
+  cik: 1121788
+  currency: USD
+  fiscal_year_end: '2024-12-28'
+  industry: Consumer and professional navigation electronics
+  information_cutoff: '2025-02-28'
+  market_date: '2025-02-28'
+  historical_years: [2020, 2021, 2022, 2023, 2024]
+segments:
+  Fitness: 1774.487
+  Outdoor: 1961.990
+  Aviation: 876.614
+  Marine: 1073.192
+  Auto OEM: 610.620
+segment_source: https://www.garmin.com/en-US/newsroom/wp-content/uploads/2025/02/2024-Q4-GRMN-Earnings-Release_Final.pdf
+peers:
+  - {ticker: LOGI, cik: 1032975, fiscal_end: '2024-03-31', rationale: Consumer electronics and peripherals; March year-end makes this a stale historical reference.}
+  - {ticker: PII, cik: 931015, fiscal_end: '2024-12-31', rationale: Outdoor recreation and discretionary demand; manufacturing intensity differs.}

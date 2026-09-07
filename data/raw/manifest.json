@@ -1,0 +1,87 @@
+[
+  {
+    "file": "custom_cash_flows.json",
+    "sha256": "2adbbef797713b4ae6ada9a864e3b96a870c17bbdf6fec9aa8f20245dc3abf2a",
+    "bytes": 2988
+  },
+  {
+    "file": "GRMN_2022_10K.html",
+    "sha256": "258fe32d5c5520f0971482c32e2254f872c10deda6bd7bb3341cb324a508e023",
+    "bytes": 5345916
+  },
+  {
+    "file": "GRMN_2022_10K.source.json",
+    "sha256": "ca1689badbb9e0bfe7c72eab29f217363401a2b2b593ce20eb7720ebf3bb142b",
+    "bytes": 241
+  },
+  {
+    "file": "GRMN_2024_10K.html",
+    "sha256": "f8e364553aa30dba3c961b94908c668dec57f1fd738f947277793e3accc5e545",
+    "bytes": 4528431
+  },
+  {
+    "file": "GRMN_2024_10K.source.json",
+    "sha256": "fecd04c0194a7d985d8c4499d19242c4be83df84c1996579ed18b77c5974be69",
+    "bytes": 241
+  },
+  {
+    "file": "GRMN_companyfacts.json",
+    "sha256": "f132e5d872392f477b3b4f7e7f3e558fd35c4f5bb10547a94ed208bd01156dd5",
+    "bytes": 3717394
+  },
+  {
+    "file": "GRMN_companyfacts.source.json",
+    "sha256": "ead840f382941e968a95e2f643a25e23424fae0626c427c3fd665a3ebd0e3564",
+    "bytes": 218
+  },
+  {
+    "file": "GRMN_market.json",
+    "sha256": "e5a26fd70edde735f8b6813d99f80a80803c4fa3b09769cf379b7a74cc844e4e",
+    "bytes": 1395
+  },
+  {
+    "file": "GRMN_market.source.json",
+    "sha256": "f603b3e4e391b5016f03aef08cc00d1c2eba5ab77a380d81c6c703351470dc44",
+    "bytes": 179
+  },
+  {
+    "file": "LOGI_companyfacts.json",
+    "sha256": "c5356b428dc5b24410c9314c91a4e5c5ce3110be5bc4d8a58c728c092f35be5c",
+    "bytes": 3895502
+  },
+  {
+    "file": "LOGI_companyfacts.source.json",
+    "sha256": "e02f4834e13b8c283ffe258ef7ce8992f214c9f2466ab6a5f669be9bfd3d1116",
+    "bytes": 136
+  },
+  {
+    "file": "LOGI_market.json",
+    "sha256": "8e0314d9da5af44b0288e3f15ebe34b40d78dd683019de29bccb6f88b5665a97",
+    "bytes": 1438
+  },
+  {
+    "file": "LOGI_market.source.json",
+    "sha256": "33871f4ef3ad464855d05e9eb3c1b43a4b52e28b2b16cc750c7a9f39e4c4fb2d",
+    "bytes": 179
+  },
+  {
+    "file": "PII_companyfacts.json",
+    "sha256": "441d932436996793f5a31170716fe7519e396f5c570b72b727754552ae4aaacd",
+    "bytes": 3867024
+  },
+  {
+    "file": "PII_companyfacts.source.json",
+    "sha256": "6b254668f557dc9b9728a6a2b84631b3019c24ae31ab0ded0ffd063c6fa8d516",
+    "bytes": 136
+  },
+  {
+    "file": "PII_market.json",
+    "sha256": "f43cde74d89bbbe3776ef30341351d0609babe2e5dd69ddcf30288ab9ee199f4",
+    "bytes": 1386
+  },
+  {
+    "file": "PII_market.source.json",
+    "sha256": "0cecba0bf0cdded5c09737c8179134c23d947cf816d2c6d4d88e487e66eae4c4",
+    "bytes": 178
+  }
+]

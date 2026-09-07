@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+outputs/previews/
+*.egg-info/
+*.inspect.ndjson
+outputs/server_smoke.log
+
+scripts/build_excel.mjs
+scripts/build_excel.ps1

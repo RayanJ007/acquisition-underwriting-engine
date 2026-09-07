@@ -1,0 +1,82 @@
+[
+  {
+    "field": "repurchase_plan",
+    "period_end": "2022-12-31",
+    "value": 201.012,
+    "tag": "grmn:PaymentForPurchaseOfTreasuryStockUnderShareRepurchasePlan",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017025022760/grmn-20241228.htm",
+    "source_fiscal_year": 2024
+  },
+  {
+    "field": "acquisitions",
+    "period_end": "2022-12-31",
+    "value": 13.455,
+    "tag": "grmn:CashPaidForAcquisitionsNetOfCashAcquired",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017025022760/grmn-20241228.htm",
+    "source_fiscal_year": 2024
+  },
+  {
+    "field": "acquisitions",
+    "period_end": "2021-12-25",
+    "value": 20.175,
+    "tag": "grmn:CashPaidForAcquisitionsNetOfCashAcquired",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017023003566/grmn-20221231.htm",
+    "source_fiscal_year": 2022
+  },
+  {
+    "field": "acquisitions",
+    "period_end": "2020-12-26",
+    "value": 148.648,
+    "tag": "grmn:CashPaidForAcquisitionsNetOfCashAcquired",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017023003566/grmn-20221231.htm",
+    "source_fiscal_year": 2022
+  },
+  {
+    "field": "repurchase_plan",
+    "period_end": "2020-12-26",
+    "value": 0.0,
+    "tag": "Disclosed dash in consolidated cash-flow table",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017023003566/grmn-20221231.htm",
+    "source_fiscal_year": 2022
+  },
+  {
+    "field": "repurchase_plan",
+    "period_end": "2021-12-25",
+    "value": 0.0,
+    "tag": "Disclosed dash in consolidated cash-flow table",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017023003566/grmn-20221231.htm",
+    "source_fiscal_year": 2022
+  },
+  {
+    "field": "acquisitions",
+    "period_end": "2024-12-28",
+    "value": 16.444,
+    "tag": "grmn:CashPaidForAcquisitionsNetOfCashAcquired",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017025022760/grmn-20241228.htm",
+    "source_fiscal_year": 2024
+  },
+  {
+    "field": "acquisitions",
+    "period_end": "2023-12-30",
+    "value": 150.853,
+    "tag": "grmn:CashPaidForAcquisitionsNetOfCashAcquired",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017025022760/grmn-20241228.htm",
+    "source_fiscal_year": 2024
+  },
+  {
+    "field": "repurchase_plan",
+    "period_end": "2024-12-28",
+    "value": 62.348,
+    "tag": "grmn:PaymentForPurchaseOfTreasuryStockUnderShareRepurchasePlan",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017025022760/grmn-20241228.htm",
+    "source_fiscal_year": 2024
+  },
+  {
+    "field": "repurchase_plan",
+    "period_end": "2023-12-30",
+    "value": 98.988,
+    "tag": "grmn:PaymentForPurchaseOfTreasuryStockUnderShareRepurchasePlan",
+    "source": "https://www.sec.gov/Archives/edgar/data/1121788/000095017025022760/grmn-20241228.htm",
+    "source_fiscal_year": 2024
+  }
+]

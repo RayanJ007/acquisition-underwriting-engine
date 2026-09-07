@@ -1,0 +1,3 @@
+item,amount,classification,rationale,source
+Reported EBIT plus operating D&A,1765.154,Derived reported EBITDA,Depreciation plus intangible amortization; excludes securities amortization.,data/processed/provenance.csv
+Adjusted EBITDA,1765.154,Total,No public-disclosure-supported EBITDA addbacks applied in the default case.,Public-information diligence judgment

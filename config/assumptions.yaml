@@ -1,0 +1,39 @@
+forecast_years: 5
+risk_free: 0.043
+beta: 1.0
+equity_risk_premium: 0.055
+cost_of_debt: 0.07
+target_debt_weight: 0.20
+tax_rate: 0.21
+terminal_growth: 0.025
+entry_multiple: 15.0
+leverage: 3.0
+interest_rate: 0.075
+mandatory_amortization: 0.01
+minimum_cash: 300.0
+transaction_fee_rate: 0.02
+financing_fee_rate: 0.02
+target_irr: 0.20
+exit_multiple: 14.0
+capex_ratio: 0.035
+depreciation_rate: 0.11
+amortization: 30.666
+payout_ratio: 0.40
+dso: 57.0
+dio: 200.0
+dpo: 50.0
+other_current_assets_ratio: 0.056
+accrued_ratio: 0.034
+cogs_ratio: 0.413
+rd_ratio: 0.158
+cash_sga_ratio: 0.149
+segment_growth:
+  Fitness: 0.09
+  Outdoor: 0.06
+  Aviation: 0.05
+  Marine: 0.06
+  Auto OEM: 0.15
+scenarios:
+  base: {growth_shift: 0.0, margin_shift: 0.0, exit_multiple: 14.0}
+  upside: {growth_shift: 0.03, margin_shift: 0.02, dso: 53.0, dio: 180.0, exit_multiple: 16.0}
+  downside: {growth_shift: -0.06, margin_shift: -0.04, interest_rate: 0.095, capex_ratio: 0.045, dso: 65.0, dio: 230.0, exit_multiple: 10.0}
