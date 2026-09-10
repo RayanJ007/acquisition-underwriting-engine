@@ -9,3 +9,10 @@ outputs/server_smoke.log
 
 scripts/build_excel.mjs
 scripts/build_excel.ps1
+
+# Local notebooks, credentials and Excel owner files
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+~$*.xlsx

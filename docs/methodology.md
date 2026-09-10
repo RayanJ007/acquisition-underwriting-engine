@@ -6,13 +6,13 @@ This is a historical underwriting case with a 2025-02-28 information and market 
 
 Five Garmin segments grow independently. Base growth of 9% Fitness, 6% Outdoor, 5% Aviation, 6% Marine and 15% Auto OEM moderates FY2024's 20% group growth. Upside adds 3 percentage points to each driver; downside subtracts 6. These are illustrative underwriting judgments, not management guidance. No unit data is fabricated.
 
-COGS 41.3%, R&D 15.8% and cash SG&A 14.9% of revenue target 28% EBITDA margin. For modelling clarity, all D&A is removed from the historical functional expense pool and shown separately; forecast COGS/R&D therefore serve cash-cost approximations, not a literal GAAP functional allocation. Upside/downside changes cash SG&A by -2/+4 revenue percentage points. FY2024's derived EBITDA includes depreciation plus intangible amortization, avoiding non-operating securities amortization.
+COGS 41.3%, R&D 15.8% and cash SG&A 14.9% of revenue target 28% EBITDA margin. The forecast shows D&A separately and uses approximate cash-cost ratios. It does not reconstruct the disclosed allocation of D&A across functional expenses. Upside/downside changes cash SG&A by -2/+4 revenue percentage points. FY2024's derived EBITDA includes depreciation plus intangible amortization, avoiding non-operating securities amortization.
 
-AR uses DSO, inventory uses DIO and AP uses DPO on 365 days. Historical days also use closing balances/365 to make the driver comparison consistent, even in 53-week years. Base DSO 57, DIO 200 and DPO 50 approximately track the latest reported balances. Other operating current assets 5.6% and accrued liabilities 3.4% scale with sales. All remaining current liabilities (including taxes and dividend payables), noncurrent assets and liabilities stay fixed. This simplified assumption must be revisited in diligence.
+AR uses DSO, inventory uses DIO and AP uses DPO on 365 days. Historical days also use closing balances/365 to make the driver comparison consistent, even in 53-week years. Base DSO 57, DIO 200 and DPO 50 approximately track the latest reported balances. Other operating current assets 5.6% and accrued liabilities 3.4% scale with sales. Other current liabilities (including taxes and dividend payables), goodwill, securities, other assets and other liabilities stay fixed. These fixed balances need review in a transaction case.
 
 CapEx is 3.5% of revenue (4.5% downside), above FY2024's 3.1%, to fund growth. Depreciation uses 11% of beginning net PP&E plus half-year CapEx; intangible amortization is $30.666m annually, capped at the remaining balance. PP&E and intangible balances roll forward independently. No acquisitions, new goodwill, OCI, FX, asset sales or further securities investment is projected. Existing securities are held at book value. SBC is treated as a recurring economic cash cost, with no addback or dilution forecast.
 
-Standalone dividends equal 40% of positive net income. Debt interest uses opening balances. Mandatory repayments are 1% of original debt; excess cash above $300m repays remaining debt. Any shortfall explicitly draws a liquidity facility. There is no circularity and no balance-sheet plug. Equity rolls through net income and dividends. Forecast current/deferred taxes are simplified to cash taxes on positive pretax income; there is no NOL carryforward model.
+Standalone dividends equal 40% of positive net income. Debt interest uses opening balances. Mandatory repayments are 1% of original debt; excess cash above $300m repays remaining debt. A shortfall produces a modeled funding draw; facility availability is not established. There is no circularity and no balance-sheet plug. Equity rolls through net income and dividends. Forecast current/deferred taxes are simplified to cash taxes on positive pretax income; there is no NOL carryforward model.
 
 ## Valuation assumptions
 
@@ -31,3 +31,13 @@ No interim sponsor distributions are paid. After cash taxes, CapEx, working-capi
 QoE retains recurring R&D and SBC as economic costs. No non-recurring EBITDA addbacks are applied without evidence. Non-operating FX and tax items can explain net-income volatility but are already outside EBITDA, so adding them again would be incorrect. QoE scenario adjustments supported by the API are shown in the bridge only; investment cases use reported-derived EBITDA unless the analyst explicitly changes transaction/forecast assumptions.
 
 Terminal FCFF grows the final forecast cash flow at the selected perpetual rate; a separate terminal ROIC/reinvestment model is not included. Loss years receive no immediate tax refunds. In the forecast and Excel DCF, NOPAT equals EBIT less tax on positive EBIT.
+
+## Limits that affect interpretation
+
+The assumed $26.48bn entry EV is below the saved public-market EV of $40.36bn before any takeover premium. The modeled price does not establish seller acceptance. The maximum-price solver targets the selected case's IRR; it does not impose downside protection or lender constraints.
+
+DCF adds all existing cash and securities to enterprise value without independently reserving operating cash. The acquisition separately funds a $300m minimum. Cash restrictions, liquidity needs and tax leakage require review before applying either value to a transaction.
+
+The two historical peers differ in business mix and fiscal dates. The model does not include synergies, purchase accounting, detailed tax rules, exit fees or lender covenants. The historical expense series also has an [advertising/SG&A classification gap](data_dictionary.md#historical-expense-classification); reported EBIT and EBITDA remain intact.
+
+The final Python recommendation requires no additional base/downside funding, base IRR at least the target, and downside IRR at least zero. DCF, comps and QoE support the memo but do not directly enter that rule. See [usage](usage.md) for the workbook's preliminary decision and dashboard override behavior.

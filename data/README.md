@@ -1,15 +1,43 @@
-# Data provenance
+# Data sources and provenance
 
-The bundled SEC companyfacts JSON files are original public API responses. Each selected annual value has a tag, period, accession and filing date in `processed/provenance.csv`. Values use USD millions. Facts filed after 2025-02-28 are excluded. Restated comparatives available by that date take precedence; this is an as-of case, not an original-as-reported vintage study.
+The committed snapshots reproduce a historical case with a **February 28, 2025** information cutoff. Source retrieval timestamps are recorded separately. Financial amounts are normalized to USD millions.
 
-Garmin FY2020–FY2024 uses its 52/53-week fiscal calendar. SEC annual duration selection accepts 350–380 days and matches exact period ends. Operating D&A is depreciation plus intangible amortization; securities amortization is excluded. EBITDA is derived, not a company-adjusted measure. Positive cash outflows are stored as positive input magnitudes; CFI/CFF and cash FX are signed.
+## What is stored
 
-Garmin's 2024 10-K consolidated balance sheets show no financial borrowings. Debt and debt cash flows are explicitly zero for the five-year case (review the balance sheets and financing sections in the respective filings). Operating leases stay within other assets/liabilities and rental operating expenses; they are not added to financial debt. Other assets/liabilities are disclosed-total residuals, retained explicitly to avoid dropping taxes, lease accounts, or deferred items. They are not forecast balancing plugs.
+| Files | Purpose |
+|---|---|
+| `raw/*_companyfacts.json` | Original SEC Company Facts responses for Garmin, Logitech and Polaris. |
+| `raw/*_market.json` | Yahoo daily chart responses; the model selects the dated unadjusted close, not current metadata. |
+| `raw/GRMN_*_10K.html` | Original Garmin annual reports used for custom inline-XBRL disclosures. |
+| `raw/*.source.json` | Source URLs and retrieval timestamps; reconstructed timestamps are labeled. |
+| `raw/custom_cash_flows.json` | Acquisition and repurchase-plan cash payments extracted from the reports. |
+| `raw/manifest.json` | SHA-256 fingerprints and byte counts for source files. |
+| `processed/historicals.csv` | Normalized FY2020–FY2024 Garmin financials. |
+| `processed/provenance.csv` | Selected historical tags, periods, accessions, filing dates and sources. |
+| `processed/peer_provenance.csv` | Source records for peer financial inputs. |
 
-FY2024 segment inputs come from Garmin's earnings release linked in company.yaml. The source units are thousands, converted to millions. Historical share prices are unadjusted daily closes from Yahoo's chart endpoint dated 2025-02-28. Current metadata in that response is not used. Shares for valuation are the latest fiscal balance-date shares known at the cutoff, so market capitalization is an estimate, not a vendor market cap.
+Raw SEC filing HTML is retained for disclosures that require direct inline-XBRL extraction. [The extraction script](../scripts/extract_custom_facts.py) uses Beautiful Soup to read financial tags and their period contexts, rather than screen positions or visual table layouts. It selects consolidated annual contexts for acquisition and repurchase cash payments. The 2020/2021 repurchase-plan zeros reflect explicit dashes in the FY2022 cash-flow table, not missing-data defaults.
 
-Refresh: set SEC_USER_AGENT to your real research contact and run `python scripts/download_data.py`. SEC access failures must not be replaced with made-up facts. Offline execution uses the committed snapshots. Manual path: copy the historical CSV schema, enter disclosed values, supply a matching provenance.csv with filing links and units, then use `load_historicals(manual='path.csv')`. To replace the target, update company.yaml, supply its raw facts and map its disclosure tags. Zero-debt treatment is Garmin-specific and must be replaced for a different company.
+## Selection and accounting conventions
 
-Peers are historical annual reference comparables, not LTM or forward multiples. Their individual period ends remain visible. The small mixed-business set cannot independently establish fair value.
+[The data module](../src/data.py) matches exact fiscal period ends, accepts annual flows of 350–380 days and excludes filings after the cutoff. Garmin uses a 52/53-week calendar. Later eligible comparatives take precedence within the selected tag; this is an as-of case rather than an original-filing-vintage study.
 
-Custom acquisitions and repurchase-plan cash payments are extracted reproducibly from the original FY2022 and FY2024 inline-XBRL filings by `scripts/extract_custom_facts.py`. The 2020/2021 repurchase-plan zeros are explicit dashes in the FY2022 consolidated cash-flow table. Total buybacks combine those cash payments with employee share withholding. Do not use the similarly named equity-statement repurchase tag: it is an accrual amount. Raw-file SHA256 fingerprints and byte counts are in `raw/manifest.json`; each downloaded source has a retrieval metadata sidecar.
+Operating D&A includes depreciation and intangible amortization, excluding securities amortization. EBITDA is derived from reported components. Outflow inputs such as CapEx use positive magnitudes; aggregate CFI, CFF and FX movements retain their signs. Buybacks combine repurchase-plan cash payments and employee share withholding, rather than using an accrual-based equity-statement repurchase measure.
+
+Garmin's zero financial debt is an explicit disclosure-based convention, not a generic missing-data fallback. Operating leases remain in other assets/liabilities and rental expenses. Residual asset/liability buckets preserve accounts not modeled separately. See the [data dictionary](../docs/data_dictionary.md) for definitions and the known FY2020/2021 advertising/SG&A classification limitation.
+
+FY2024 segment sales and the source-release URL are in [company configuration](../config/company.yaml). Source thousands are converted to millions. Fiscal-end shares approximate shares on the market date. Peers retain their individual fiscal ends and are historical annual references, not LTM or forward comparables.
+
+## Reproduce or refresh
+
+The normal pipeline uses the committed snapshots without network access. To replace API snapshots, set `SEC_USER_AGENT` to your real identifying research contact, then run from the repository root:
+
+```powershell
+python scripts/download_data.py --refresh
+python scripts/extract_custom_facts.py
+python -m src.pipeline
+```
+
+Use your environment's Python executable. Without `--refresh`, the downloader preserves existing API files. The extraction script reuses existing annual-report HTML and downloads it only if missing. Network failures raise errors rather than creating substitute financial figures. Refresh does not change the configured information cutoff. Preserve the original snapshots when reproducing the published case.
+
+For manual imports or a different target, follow [model usage](../docs/usage.md). The automatic historical mappings and zero-debt convention are Garmin-specific.

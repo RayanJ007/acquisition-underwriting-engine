@@ -10,7 +10,7 @@ All monetary fields use USD millions. Period labels are fiscal, not calendar app
 | `cogs` | SEC US-GAAP tag: CostOfGoodsAndServicesSold, CostOfRevenue |
 | `gross_profit` | SEC US-GAAP tag: GrossProfit |
 | `ebit` | SEC US-GAAP tag: OperatingIncomeLoss |
-| `sga` | SEC US-GAAP tag: SellingGeneralAndAdministrativeExpense |
+| `sga` | SEC US-GAAP tag: SellingGeneralAndAdministrativeExpense; advertising classification changes across the historical series (see below). |
 | `rd` | SEC US-GAAP tag: ResearchAndDevelopmentExpense |
 | `depreciation` | SEC US-GAAP tag: Depreciation |
 | `amortization` | SEC US-GAAP tag: AmortizationOfIntangibleAssets |
@@ -51,6 +51,10 @@ All monetary fields use USD millions. Period labels are fiscal, not calendar app
 | `other_assets` | Total assets less explicitly modelled assets; includes tax/lease and other disclosed accounts |
 | `other_current_liabilities` | Current liabilities less AP and selected accruals; held fixed in forecast |
 | `other_liabilities` | Total assets less equity, current liabilities and financial debt |
+
+## Historical expense classification
+
+The normalized FY2020/2021 SG&A values exclude separately disclosed advertising of $151.166m and $171.829m. From FY2022, the selected SG&A values include advertising. Add the earlier advertising expenses when reconciling gross profit less operating costs to EBIT; do not interpret this column as a consistent five-year expense series. The amounts appear in the saved FY2022 10-K income statement. Reported EBIT and derived EBITDA are sourced independently and remain intact. The existing tests do not check this operating-expense bridge.
 
 ## Forecast fields
 
